@@ -15,5 +15,6 @@ abstract  class Funcionario(//abstract faz que a class ja fica com status de ope
         println("Salario atual de R$ $salario reais")
     }
 
-    open val bonificacao:Double = salario * 0.1
+    abstract val bonificacao:Double// o fato de ser um val abstract faz que as class que pegar a class funcionario seja obrigada a implementar a sua propia bonificaçao
+
 }

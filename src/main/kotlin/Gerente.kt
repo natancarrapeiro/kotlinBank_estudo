@@ -17,7 +17,7 @@ class Gerente(
         } else return false
     }
 
-    override val bonificacao: Double = super.bonificacao +salario //property //super =class mae
+    override val bonificacao: Double =salario //property //super =class mae
 
 
 }

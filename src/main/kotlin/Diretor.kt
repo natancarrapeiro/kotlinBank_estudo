@@ -19,7 +19,7 @@ class Diretor(
         } else return false
     }
 
-    override val bonificacao: Double = super.bonificacao + salario +plr//property //super =class mae
+    override val bonificacao: Double = salario +plr//property //super =class mae
 
 
 
