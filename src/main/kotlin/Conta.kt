@@ -1,9 +1,9 @@
 //class
-open class Conta(
+abstract class Conta(
     private val titular: String,
     private val numeroConta: Int, // = Random.nextInt(1,1000),
 ) {
-    private var saldo: Double = 0.0
+    protected var saldo: Double = 0.0
     //getters e setter no kotlin
     //private set
     //get() = field
@@ -22,16 +22,7 @@ open class Conta(
         }
     }
 
-     internal open fun sacar(valor: Double) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor
-            println("Saque de $valor efetuado com sucesso")
-            println("Saldo atual de :${this.saldo}")
-        } else {
-            println("saldo indispoinivel")
-            println("verifique seu saldo atuial antes de sacar")
-        }
-    }
+    abstract fun sacar(valor: Double)
 
     internal fun transferir(contaDestino: Conta, valorDeTranferencia: Double): Boolean {
         return if (this.saldo > valorDeTranferencia) {

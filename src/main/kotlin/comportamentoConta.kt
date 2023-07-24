@@ -1,8 +1,8 @@
 fun comportamentoConta() {
-    val contaNatan = Conta("natan", 1000)
+    val contaNatan = ContaCorrente("natan", 1000)
 
 
-    val contaCarapeiro = Conta("carrapeiro", 2000)
+    val contaCarapeiro = ContaPolpanca("carrapeiro", 2000)
 
 
 
