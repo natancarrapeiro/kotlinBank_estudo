@@ -9,9 +9,9 @@ fun testaAtenticacao() {
     val clienteMaria= Cliente(
         nome = "maria",
         cpf = "123.123.123-12",
-        senh = 123
+        senha = 123
     )
     val sistema = SistemaInterno()
     sistema.entra(gerente, 2012)
-    sistema.entra(clienteMaria,123)
+    sistema.entra(clienteMaria,13)
 }

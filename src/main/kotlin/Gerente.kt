@@ -8,7 +8,7 @@ class Gerente(
     cpf = cpf,
     salario = salario,
     senha = senha
-) {
+),Autenticavel {
     override fun meuFuncionario() {
         this.nome
         this.cpf
