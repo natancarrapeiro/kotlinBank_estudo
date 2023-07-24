@@ -5,6 +5,13 @@ fun testaAtenticacao() {
         5000.0,
         2012
     )
+
+    val clienteMaria= Cliente(
+        nome = "maria",
+        cpf = "123.123.123-12",
+        senh = 123
+    )
     val sistema = SistemaInterno()
     sistema.entra(gerente, 2012)
+    sistema.entra(clienteMaria,123)
 }
