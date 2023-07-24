@@ -5,7 +5,7 @@ class Gerente(
         this.nome
         this.cpf
         this.salario
-        println("Nome do funcionario $nome")
+        println("Nome do gerente $nome")
         println("CPF $cpf")
         println("Salario atual de R$ $salario reais")
         this.senha
