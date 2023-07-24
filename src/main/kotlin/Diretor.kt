@@ -1,5 +1,5 @@
 class Diretor(
-    nome: String, cpf: String, salario: Double, val senha: Int,plr:Double//participação do lucro
+    nome: String, cpf: String, salario: Double, val senha: Int,var plr:Double//participação do lucro
 ) : Funcionario(nome = nome, cpf = cpf, salario = salario) {
 
     override fun meuFuncionario() {

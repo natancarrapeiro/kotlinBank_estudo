@@ -1,6 +1,6 @@
 class Gerente(
-    nome: String, cpf: String, salrio: Double, val senha: Int,
-) : Funcionario(nome = nome, cpf = cpf, salario = salrio) {
+    nome: String, cpf: String, salario: Double, val senha: Int,
+) : Funcionario(nome = nome, cpf = cpf, salario = salario) {
     override fun meuFuncionario() {
         this.nome
         this.cpf
@@ -17,7 +17,7 @@ class Gerente(
         } else return false
     }
 
-    override val bonificacao: Double = super.bonificacao +salrio //property //super =class mae
+    override val bonificacao: Double = super.bonificacao +salario //property //super =class mae
 
 
 }
