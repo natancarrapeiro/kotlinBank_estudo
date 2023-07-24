@@ -5,11 +5,7 @@ fun testeFuncionario() {
         cpf = "121.241.145-24",
         salario = 2000.0
     )
-//    val natan = Funcionario(
-//        nome = "natan_Carrapeiro",// apos a class Funcionario virar class abstract  ela nao pode ser chamada
-//        cpf = "121.241.145-24",
-//        salario = 2000.0
-//    )
+//
     natan.meuFuncionario()
     println(natan.bonificacao)
     println()
@@ -33,7 +29,7 @@ fun testeFuncionario() {
     albertoDiretor.meuFuncionario()
     println(albertoDiretor.bonificacao)
     println()
-    // calculadora
+//     calculadora
     var calcula = CalculadoraBonificacao()
     calcula.resgistra(natan)
     calcula.resgistra(carrapeGerente)

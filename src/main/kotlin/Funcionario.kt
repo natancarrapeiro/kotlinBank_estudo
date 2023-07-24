@@ -3,7 +3,7 @@ abstract  class Funcionario(//abstract faz que a class ja fica com status de ope
     val nome: String,
     val cpf: String,
     val salario: Double,
-    //0 gargo comum/ 1 vendedor/2 gerente
+
 ) {
     //comportamento
     open fun meuFuncionario() {

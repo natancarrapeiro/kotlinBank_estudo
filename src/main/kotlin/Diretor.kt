@@ -1,7 +1,15 @@
 class Diretor(
-    nome: String, cpf: String, salario: Double, val senha: Int,var plr:Double//participação do lucro
-) : Funcionario(nome = nome, cpf = cpf, salario = salario) {
-
+    nome: String,
+    cpf: String,
+    salario: Double,
+    senha: Int,
+    var plr: Double,//participação do lucro
+) : FuncionarioAdmin(
+    nome = nome,
+    cpf = cpf,
+    salario = salario,
+    senha = senha
+) {
     override fun meuFuncionario() {
         this.nome
         this.cpf
@@ -13,14 +21,6 @@ class Diretor(
         println("so pra mostra que tem como usar a msm função com pequenas alteração")
     }
 
-    fun autentica(senha: Int): Boolean {
-        if (this.senha == senha) {
-            return true
-        } else return false
-    }
-
-    override val bonificacao: Double = salario +plr//property //super =class mae
-
-
+    override val bonificacao: Double = salario + plr//property //super =class mae
 
 }
