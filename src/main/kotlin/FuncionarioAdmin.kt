@@ -4,14 +4,19 @@ abstract class FuncionarioAdmin(
     nome: String,
     cpf: String,
     salario: Double,
-    val senha: Int,
+    protected val senha: Int,
 
-    ) : Funcionario(nome = nome, cpf = cpf, salario = salario) {
+    ) : Funcionario(
+    nome = nome,
+    cpf = cpf,
+    salario = salario
+),Autenticavel { //inseri uma interface
     //comportamento
-
-    fun autentica(senha: Int): Boolean {
-        if (this.senha == senha) {
-            return true
-        } else return false
+    override fun autentica(senha: Int): Boolean {
+        //println("autentica pelo funcionario admin")
+        return if (this.senha == senha) {
+            true
+        } else false
     }
+
 }

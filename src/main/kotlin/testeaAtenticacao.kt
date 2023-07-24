@@ -1,9 +1,10 @@
 fun testaAtenticacao() {
-    val gerente = Gerente(
+    val gerente = Diretor(
         "natan_Carrapeiro",
         "123.123.123-12",
         5000.0,
-        2012
+        2012,
+        233.0
     )
 
     val clienteMaria= Cliente(
@@ -13,5 +14,5 @@ fun testaAtenticacao() {
     )
     val sistema = SistemaInterno()
     sistema.entra(gerente, 2012)
-    sistema.entra(clienteMaria,13)
+    sistema.entra(clienteMaria,123)
 }

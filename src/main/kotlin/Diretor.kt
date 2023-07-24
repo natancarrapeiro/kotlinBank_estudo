@@ -9,7 +9,7 @@ class Diretor(
     cpf = cpf,
     salario = salario,
     senha = senha
-), Autenticavel {
+) {
     override fun meuFuncionario() {
         this.nome
         this.cpf
@@ -22,5 +22,6 @@ class Diretor(
     }
 
     override val bonificacao: Double = salario + plr//property //super =class mae
+
 
 }
