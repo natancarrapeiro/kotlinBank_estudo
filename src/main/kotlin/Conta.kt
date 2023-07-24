@@ -1,5 +1,5 @@
 //class
-class Conta(
+open class Conta(
     private val titular: String,
     private val numeroConta: Int, // = Random.nextInt(1,1000),
 ) {
@@ -22,7 +22,7 @@ class Conta(
         }
     }
 
-    internal fun sacar(valor: Double) {
+     internal open fun sacar(valor: Double) {
         if (this.saldo >= valor) {
             this.saldo -= valor
             println("Saque de $valor efetuado com sucesso")
@@ -46,4 +46,5 @@ class Conta(
             false
         }
     }
+
 }
