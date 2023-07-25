@@ -1,3 +1,8 @@
+package teste
+
+import modelo.ContaCorrente
+import modelo.ContaPolpanca
+
 fun testaContasDiferentes() {
     val contaCorrente = ContaCorrente(titular = "natan", numeroConta = 1000)
     val contaPolpanca = ContaPolpanca(titular = "alberto", numeroConta = 1001)

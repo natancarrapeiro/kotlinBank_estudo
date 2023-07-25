@@ -1,3 +1,5 @@
+package teste
+
 fun testeLoops() {
     var i = 0
     val titular = "natan $i"

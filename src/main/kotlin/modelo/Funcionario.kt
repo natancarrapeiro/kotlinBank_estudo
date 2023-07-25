@@ -1,3 +1,5 @@
+package modelo
+
 abstract  class Funcionario(//abstract faz que a class ja fica com status de open
     //dados
     val nome: String,

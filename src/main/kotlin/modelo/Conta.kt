@@ -1,3 +1,5 @@
+package modelo
+
 //class
 abstract class Conta(
     private val titular: String,

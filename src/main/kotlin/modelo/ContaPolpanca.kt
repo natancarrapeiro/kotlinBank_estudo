@@ -1,3 +1,7 @@
+package modelo
+
+import modelo.Conta
+
 class ContaPolpanca(titular: String, numeroConta: Int) : Conta(
     titular = titular,
     numeroConta = numeroConta

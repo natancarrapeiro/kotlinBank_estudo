@@ -1,4 +1,6 @@
- interface Autenticavel{
+package modelo
+
+interface Autenticavel{
      fun autentica(senha: Int): Boolean
 
 }
@@ -7,7 +9,7 @@
  aconselhavel nao ser usado assim pois nao é uma
   senha privada de acessos */
 
-// interface Autenticavel {
+// interface modelo.Autenticavel {
 //     val senha:Int
 //     fun autentica(senha: Int): Boolean {
 //         //println("autentica pela interface")

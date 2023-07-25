@@ -1,3 +1,5 @@
+package modelo
+
 abstract class FuncionarioAdmin(
 //abstract faz que a class ja fica com status de open
     //dados
@@ -10,7 +12,7 @@ abstract class FuncionarioAdmin(
     nome = nome,
     cpf = cpf,
     salario = salario
-),Autenticavel { //inseri uma interface
+), Autenticavel { //inseri uma interface
     //comportamento
     override fun autentica(senha: Int): Boolean {
         //println("autentica pelo funcionario admin")

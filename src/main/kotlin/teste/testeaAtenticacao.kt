@@ -1,3 +1,9 @@
+package teste
+
+import modelo.Cliente
+import modelo.Diretor
+import modelo.SistemaInterno
+
 fun testaAtenticacao() {
     val gerente = Diretor(
         "natan_Carrapeiro",

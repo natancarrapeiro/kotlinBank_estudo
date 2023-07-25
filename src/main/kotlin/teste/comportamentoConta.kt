@@ -1,3 +1,8 @@
+package teste
+
+import modelo.ContaCorrente
+import modelo.ContaPolpanca
+
 fun comportamentoConta() {
     val contaNatan = ContaCorrente("natan", 1000)
 

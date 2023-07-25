@@ -1,3 +1,5 @@
+package modelo
+
 class Diretor(
     nome: String,
     cpf: String,
@@ -14,7 +16,7 @@ class Diretor(
         this.nome
         this.cpf
         this.salario
-        println("Nome do Diretor $nome")
+        println("Nome do modelo.Diretor $nome")
         println("CPF $cpf")
         println("Salario atual de R$ $salario reais")
         this.senha
