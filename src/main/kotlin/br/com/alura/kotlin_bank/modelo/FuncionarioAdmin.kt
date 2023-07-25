@@ -1,4 +1,4 @@
-package modelo
+package br.com.alura.kotlin_bank.modelo
 
 abstract class FuncionarioAdmin(
 //abstract faz que a class ja fica com status de open

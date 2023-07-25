@@ -1,6 +1,6 @@
-package teste
+package br.com.alura.kotlin_bank.teste
 
-import modelo.ContaCorrente
+import br.com.alura.kotlin_bank.modelo.ContaCorrente
 
 fun testeCopiasEReferencias() {
     val contaJoao = ContaCorrente("joao",500)

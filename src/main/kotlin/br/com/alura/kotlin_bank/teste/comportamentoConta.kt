@@ -1,7 +1,7 @@
-package teste
+package br.com.alura.kotlin_bank.teste
 
-import modelo.ContaCorrente
-import modelo.ContaPolpanca
+import br.com.alura.kotlin_bank.modelo.ContaCorrente
+import br.com.alura.kotlin_bank.modelo.ContaPolpanca
 
 fun comportamentoConta() {
     val contaNatan = ContaCorrente("natan", 1000)

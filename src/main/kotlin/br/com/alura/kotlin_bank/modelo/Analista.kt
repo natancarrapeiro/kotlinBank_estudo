@@ -1,4 +1,4 @@
-package modelo
+package br.com.alura.kotlin_bank.modelo
 
 class Analista(
     nome: String, cpf: String, salario: Double,

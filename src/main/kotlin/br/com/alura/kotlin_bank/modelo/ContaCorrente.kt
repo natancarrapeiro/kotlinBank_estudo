@@ -1,6 +1,6 @@
-package modelo
+package br.com.alura.kotlin_bank.modelo
 
-import modelo.Conta
+import br.com.alura.kotlin_bank.modelo.Conta
 
 class ContaCorrente(titular: String, numeroConta: Int) : Conta(
     titular = titular,

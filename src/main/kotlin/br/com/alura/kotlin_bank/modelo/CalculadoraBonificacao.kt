@@ -1,6 +1,6 @@
-package modelo
+package br.com.alura.kotlin_bank.modelo
 
-import modelo.Funcionario
+import br.com.alura.kotlin_bank.modelo.Funcionario
 
 class CalculadoraBonificacao {
     private var total: Double = 0.0

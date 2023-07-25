@@ -1,4 +1,4 @@
-package modelo
+package br.com.alura.kotlin_bank.modelo
 
 interface Autenticavel{
      fun autentica(senha: Int): Boolean

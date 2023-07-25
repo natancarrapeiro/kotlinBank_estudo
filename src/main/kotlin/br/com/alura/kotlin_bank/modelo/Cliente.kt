@@ -1,6 +1,6 @@
-package modelo
+package br.com.alura.kotlin_bank.modelo
 
-import modelo.Autenticavel
+import br.com.alura.kotlin_bank.modelo.Autenticavel
 
 class Cliente(
     val nome: String,

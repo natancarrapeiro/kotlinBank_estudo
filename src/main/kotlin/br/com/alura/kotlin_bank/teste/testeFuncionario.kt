@@ -1,9 +1,9 @@
-package teste
+package br.com.alura.kotlin_bank.teste
 
-import modelo.Analista
-import modelo.CalculadoraBonificacao
-import modelo.Diretor
-import modelo.Gerente
+import br.com.alura.kotlin_bank.modelo.Analista
+import br.com.alura.kotlin_bank.modelo.CalculadoraBonificacao
+import br.com.alura.kotlin_bank.modelo.Diretor
+import br.com.alura.kotlin_bank.modelo.Gerente
 
 fun testeFuncionario() {
     //funcionario

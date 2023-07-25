@@ -1,10 +1,10 @@
-package teste
+package br.com.alura.kotlin_bank.teste
 
-import modelo.Cliente
-import modelo.Diretor
-import modelo.SistemaInterno
+import br.com.alura.kotlin_bank.modelo.Cliente
+import br.com.alura.kotlin_bank.modelo.Diretor
+import br.com.alura.kotlin_bank.modelo.SistemaInterno
 
-fun testaAtenticacao() {
+fun testaAutenticacao() {
     val gerente = Diretor(
         "natan_Carrapeiro",
         "123.123.123-12",

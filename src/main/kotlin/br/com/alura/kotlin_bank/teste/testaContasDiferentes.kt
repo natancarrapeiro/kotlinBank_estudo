@@ -1,7 +1,7 @@
-package teste
+package br.com.alura.kotlin_bank.teste
 
-import modelo.ContaCorrente
-import modelo.ContaPolpanca
+import br.com.alura.kotlin_bank.modelo.ContaCorrente
+import br.com.alura.kotlin_bank.modelo.ContaPolpanca
 
 fun testaContasDiferentes() {
     val contaCorrente = ContaCorrente(titular = "natan", numeroConta = 1000)

@@ -1,4 +1,4 @@
-package teste
+package br.com.alura.kotlin_bank.teste
 
 fun testeCondisao(saldo: Double) {
     when {
