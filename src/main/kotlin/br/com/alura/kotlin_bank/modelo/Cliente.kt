@@ -1,11 +1,10 @@
 package br.com.alura.kotlin_bank.modelo
 
-import br.com.alura.kotlin_bank.modelo.Autenticavel
-
 class Cliente(
     val nome: String,
     val cpf: String,
-    private val senha: Int,
+    val endereco: Endereco=Endereco(),
+    internal val senha: Int,
 ) : Autenticavel {
 
     override fun autentica(senha: Int): Boolean {

@@ -1,6 +1,6 @@
 package br.com.alura.kotlin_bank
 
-import br.com.alura.kotlin_bank.teste.testaAutenticacao  as autentica
+import br.com.alura.kotlin_bank.teste.testaContasDiferentes
 
 //ctrl+alt+O limpa os imports não utilizado
 fun main() {
@@ -8,7 +8,8 @@ fun main() {
     // comportamentoConta()
     //testeFuncionario()
     //testaContasDiferentes()
-    autentica()
+   // autentica()
+    testaContasDiferentes()
 
 }
 

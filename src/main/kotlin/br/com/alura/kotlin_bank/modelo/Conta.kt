@@ -2,7 +2,7 @@ package br.com.alura.kotlin_bank.modelo
 
 //class
 abstract class Conta(
-    private val titular: String,
+    internal val titular: Cliente,
     private val numeroConta: Int, // = Random.nextInt(1,1000),
 ) {
     protected var saldo: Double = 0.0
