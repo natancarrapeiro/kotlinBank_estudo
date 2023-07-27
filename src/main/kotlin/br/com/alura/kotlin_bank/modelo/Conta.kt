@@ -1,11 +1,19 @@
 package br.com.alura.kotlin_bank.modelo
 
+import br.com.alura.kotlin_bank.totalContas
+
 //class
 abstract class Conta(
     internal val titular: Cliente,
     private val numeroConta: Int, // = Random.nextInt(1,1000),
 ) {
     protected var saldo: Double = 0.0
+
+
+    init {
+        println("Criando conta")
+        totalContas++
+    }
     //getters e setter no kotlin
     //private set
     //get() = field
