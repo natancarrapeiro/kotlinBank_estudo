@@ -1,7 +1,6 @@
 package br.com.alura.kotlin_bank.modelo
 
-var totalContas=0
-    private set
+
 //class
 abstract class Conta(
     internal val titular: Cliente,
@@ -9,10 +8,13 @@ abstract class Conta(
 ) {
     protected var saldo: Double = 0.0
 
-
+    companion object Contador{
+        var totalDeContas=0
+            private set
+    }
     init {
         println("Criando conta")
-        totalContas++
+        totalDeContas++
     }
     //getters e setter no kotlin
     //private set
