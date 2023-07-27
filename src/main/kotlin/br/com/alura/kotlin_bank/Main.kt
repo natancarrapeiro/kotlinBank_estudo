@@ -7,36 +7,49 @@ import br.com.alura.kotlin_bank.teste.*
 
 fun main() {
 
+    val endereco = Endereco(
+        logradouro = "casa",
+        bairro = "dourado",
+        cidade = "Guapirama",
+        estado = "parana",
+        cep = "4s45",
+        complemento = "sitio"
+
+    )
+    val enderecoNovo = Endereco()
 
 
 
+   println(endereco.toString())
+//    println(enderecoNovo.toString())//toString trazer uma representação textual de uma instância de um objeto
 
+//    println(endereco.hashCode())
+//    println(enderecoNovo.hashCode())//ANY.hashCode serve como ID/rg de um objeto
 
-    // println("Bem vindo ao Kotlin Bank")
-    // comportamentoConta()
-    //testeFuncionario()
-    //testaContasDiferentes()
-   // autentica()
-    //testaContasDiferentes()
+//    println(endereco.equals(endereco)) //Any.equals serve pra comparação
 
-/*
-val objectException=object {
-        val nome:String="natan"
-        val cpf:String="123.123.123-25"
-        val senha:Int=1000
-      fun autentica(senha:Int)=this.senha==senha
-   }
-   println("nome do cliente ${objectException.nome}")
- */
-
-
-    val natan = Cliente("natan", cpf = "123", Endereco(),senha=2)
-    val contapopancaNatan=ContaPolpanca(natan,200)
-    val contaCorrenteNatan=ContaCorrente(natan,200)
-    println("Total de contas: ${Conta.totalDeContas}")
-
+    fun imprime(valor: Any): Any {
+        println(valor)
+        return valor
+    }
 }
 
+
+
+// println("Bem vindo ao Kotlin Bank")
+// comportamentoConta()
+//testeFuncionario()
+//testaContasDiferentes()
+// autentica()
+//testaContasDiferentes()
+
+/*
+ object declarations e companion object
+companion object Contador{
+        var totalDeContas=0
+            private set
+    }
+*/
 
 
 

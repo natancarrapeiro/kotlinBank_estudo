@@ -10,4 +10,16 @@ class Endereco (
     val complemento:String=""
 
 ){
+    //alt+ insert (toString) seleciona o que quer mostrar
+    override fun toString(): String {
+        return """
+            |Endereco(logradouro='$logradouro',
+            | numero=$numero,
+            | bairro='$bairro', 
+            | cidade='$cidade',
+            | estado='$estado', 
+            | cep='$cep', 
+            | complemento='$complemento')
+            | """.trimMargin()
+    }
 }
