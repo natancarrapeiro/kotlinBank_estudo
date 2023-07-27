@@ -1,7 +1,7 @@
 package br.com.alura.kotlin_bank.modelo
 
-import br.com.alura.kotlin_bank.totalContas
-
+var totalContas=0
+    private set
 //class
 abstract class Conta(
     internal val titular: Cliente,
