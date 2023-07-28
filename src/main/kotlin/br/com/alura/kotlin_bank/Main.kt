@@ -23,6 +23,7 @@ fun main() {
 //    println(enderecoNovo.toString())//toString trazer uma representação textual de uma instância de um objeto
 
     println(endereco.hashCode())
+
 //    println(enderecoNovo.hashCode())//ANY.hashCode serve como id/rg de um objeto
     println(endereco == enderecoNovo) //Any.equals serve pra comparação
 
@@ -30,6 +31,7 @@ fun main() {
         println(valor)
         return valor
     }
+    imprime(enderecoNovo.toString())
 }
 
 
