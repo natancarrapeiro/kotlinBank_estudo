@@ -9,7 +9,7 @@ import br.com.alura.kotlin_bank.teste.*
 fun main() {
 
     println("início main")
-   // funcao1()
+//    funcao1()
     testaContasDiferentes()
     println("fim main")
 }

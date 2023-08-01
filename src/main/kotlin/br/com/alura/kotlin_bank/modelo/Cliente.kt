@@ -3,7 +3,7 @@ package br.com.alura.kotlin_bank.modelo
 class Cliente(
     val nome: String,
     val cpf: String,
-    val endereco: Endereco=Endereco(),
+    val endereco: Endereco = Endereco(),
     internal val senha: Int,
 ) : Autenticavel {
 
@@ -12,4 +12,4 @@ class Cliente(
             true
         } else false
     }
-    }
+}

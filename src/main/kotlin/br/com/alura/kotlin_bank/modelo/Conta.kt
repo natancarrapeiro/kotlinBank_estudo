@@ -1,5 +1,6 @@
 package br.com.alura.kotlin_bank.modelo
 
+import br.com.alura.kotlin_bank.exception.FalhaAutenticacaoException
 import br.com.alura.kotlin_bank.exception.SaldoInsuficienteException
 
 
@@ -7,7 +8,7 @@ import br.com.alura.kotlin_bank.exception.SaldoInsuficienteException
 abstract class Conta(
     internal val titular: Cliente,
     private val numeroConta: Int, // = Random.nextInt(1,1000),
-) {
+):Autenticavel {
     protected var saldo: Double = 0.0
 
     companion object Contador {
@@ -40,15 +41,31 @@ abstract class Conta(
 
     abstract fun sacar(valor: Double)
 
-    internal fun transferir(contaDestino: Conta, valorDeTranferencia: Double) {
-        if (saldo<valorDeTranferencia){
-            throw SaldoInsuficienteException()
+    internal fun transferir(contaDestino: Conta, valorDeTranferencia: Double,senha:Int) {
+        if (saldo < valorDeTranferencia) {
+            throw SaldoInsuficienteException(
+                mensagem = "Saldo insuficiente," +
+                        " saldo atual: $saldo ;" +
+                        " valor de trasferencia $valorDeTranferencia "
+            )
         }
-            this.saldo -= valorDeTranferencia
-            contaDestino.depositar(valorDeTranferencia)
-            println("transferencia relizada com sucesso ")
-            println("Valor transferido da conta ${this.titular} no valor  de R$$valorDeTranferencia para conta de ${contaDestino.titular}")
+        if (!autentica(senha)){
+            throw  FalhaAutenticacaoException()
+        }
 
+
+        this.saldo -= valorDeTranferencia
+        contaDestino.depositar(valorDeTranferencia)
+        println("transferencia relizada com sucesso ")
+        println(
+            "Valor transferido da conta ${this.titular} no valor  " +
+                    "de R$$valorDeTranferencia para conta de ${contaDestino.titular}"
+        )
+
+    }
+
+    override fun autentica(senha: Int): Boolean {
+       return titular.autentica(senha)//delegando a outra class
     }
 
 }
