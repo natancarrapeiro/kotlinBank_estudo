@@ -1,5 +1,6 @@
 package br.com.alura.kotlin_bank.teste
 
+import br.com.alura.kotlin_bank.exception.SaldoInsuficienteException
 import br.com.alura.kotlin_bank.modelo.Cliente
 import br.com.alura.kotlin_bank.modelo.ContaCorrente
 import br.com.alura.kotlin_bank.modelo.ContaPolpanca
@@ -17,7 +18,15 @@ fun testaContasDiferentes() {
     contaCorrente.sacar(100.0)
     contaPolpanca.sacar(100.0)
 
-    contaCorrente.transferir(contaDestino = contaPolpanca, valorDeTranferencia = 50.0)
+    try {
+        contaCorrente.transferir(contaDestino = contaPolpanca, valorDeTranferencia = 50.0)
+        println("teste exception ")
+        println("tranferencia realizada ")
+    }catch (e:SaldoInsuficienteException){
+        println("falha na trasferencia por saldo insuficiente")
+        e.printStackTrace()
+    }
+
     contaPolpanca.minhaConta()
     contaCorrente.minhaConta()
 

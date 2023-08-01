@@ -1,5 +1,7 @@
 package br.com.alura.kotlin_bank.modelo
 
+import br.com.alura.kotlin_bank.exception.SaldoInsuficienteException
+
 
 //class
 abstract class Conta(
@@ -8,10 +10,11 @@ abstract class Conta(
 ) {
     protected var saldo: Double = 0.0
 
-    companion object Contador{
-        var totalDeContas=0
+    companion object Contador {
+        var totalDeContas = 0
             private set
     }
+
     init {
         println("Criando conta")
         totalDeContas++
@@ -26,6 +29,7 @@ abstract class Conta(
         println(this.saldo)
     }
 
+
     internal fun depositar(valor: Double) {
         if (valor > 0) {
             this.saldo += valor
@@ -36,18 +40,15 @@ abstract class Conta(
 
     abstract fun sacar(valor: Double)
 
-    internal fun transferir(contaDestino: Conta, valorDeTranferencia: Double): Boolean {
-        return if (this.saldo > valorDeTranferencia) {
+    internal fun transferir(contaDestino: Conta, valorDeTranferencia: Double) {
+        if (saldo<valorDeTranferencia){
+            throw SaldoInsuficienteException()
+        }
             this.saldo -= valorDeTranferencia
-
             contaDestino.depositar(valorDeTranferencia)
             println("transferencia relizada com sucesso ")
             println("Valor transferido da conta ${this.titular} no valor  de R$$valorDeTranferencia para conta de ${contaDestino.titular}")
-            true
-        } else {
-            println("valor de tranferencia maior do que saldo atual da conta: ${this.titular}")
-            false
-        }
+
     }
 
 }
