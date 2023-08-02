@@ -20,17 +20,20 @@ fun testaContasDiferentes() {
     contaPolpanca.sacar(100.0)
 
     try {
-        contaCorrente.transferir(contaDestino = contaPolpanca, valorDeTranferencia =50.0 ,senha=5)
+        contaCorrente.transferir(contaDestino = contaPolpanca, valorDeTranferencia =50.0 ,senha=2)
         println("teste exception ")
         println("tranferencia realizada ")
-    }catch (e:SaldoInsuficienteException){
+    } catch (e:SaldoInsuficienteException){
         println("falha na trasferencia por saldo insuficiente")
         e.printStackTrace()
     }catch (e:FalhaAutenticacaoException){
         println("Falha na autenticacão")
         println("Senha incorreta")
         e.printStackTrace()
-
+    }
+    catch (e:Exception){// sempre por ultimo a falha desconhecida
+        println("erro desconhecido")
+        e.printStackTrace()
     }
 
     contaPolpanca.minhaConta()
