@@ -1,49 +1,40 @@
 package br.com.alura.kotlin_bank
 
-import br.com.alura.kotlin_bank.Array.ArrayforEach
-import br.com.alura.kotlin_bank.Array.alterandoArray
-import br.com.alura.kotlin_bank.Array.navegandoArray
-import br.com.alura.kotlin_bank.exception.SaldoInsuficienteException
-import br.com.alura.kotlin_bank.modelo.*
-import br.com.alura.kotlin_bank.teste.*
-import java.lang.IllegalStateException
-
 //ctrl+alt+O limpa os imports não utilizado
 
 fun main() {
 
-    //doc https://kotlinlang.org/docs/basic-syntax.html#ranges
-    val sequencia:IntRange = 1.rangeTo(10)
-    for (s in sequencia){
-        println("$s")
-    }
+    val idade: IntArray = intArrayOf(20, 22, 15, 34, 13, 46)
+    var maiorIdade = idade.max()//maior
+    println(maiorIdade)
     println()
 
-   val numeroPares: IntProgression = 0..100 step 2
-    for (numeropar in numeroPares){
-        println("$numeropar")
-    }
+    val menorIdade = idade.min()//menor
+    println(maiorIdade)
     println()
 
-    var numerosDecrescentePar: IntProgression =100 downTo 0 step 2
-    numerosDecrescentePar.forEach {
-        println("$it")
-    }
+    val mediaIdade = idade.average()//media
+    println(maiorIdade)
     println()
 
-    val intervalo: ClosedFloatingPointRange<Double> = 1500.0..5000.0
-    val salario=35000.0
-    if (salario in intervalo){
-        println("O salario esta entre o intervalo ")
-    }else{
-        println("não salario esta entre o intervalo ")
-    }
+    val maioresDeIdaade = idade.all { it >= 18 }//vejo se todos atende a condição
+    println("maiores de idaded $maioresDeIdaade")
+    println()
 
-    val alfabeto: ClosedRange<String> ="a".."z"
-    val letra="k"
-    println(letra in alfabeto)
+    var existeAlunoMenorDeIdade = idade.any { it < 18 }//aumenos um (OR)
+    println("existe aluno menor de idade $existeAlunoMenorDeIdade")
+    println()
+
+    val menoresDeIdadeNaoAltorisado = idade.filter { it < 18 }//filtrar
+    println("quais a idade dos menores $menoresDeIdadeNaoAltorisado")
+    println()
+
+    val busca = idade.find { it >= 20 }//procuara de um dado expecifico
+    println("buca se tem a idade $busca")
 
 }
+
+
 
 
 
@@ -51,6 +42,7 @@ fun main() {
 //navegandoArray()
 //ArrayforEach()
 //alterandoArray()
+//rengesArray()
 
 // println("Bem vindo ao Kotlin Bank")
 // comportamentoConta()
