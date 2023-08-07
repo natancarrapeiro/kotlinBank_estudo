@@ -7,9 +7,12 @@ import br.com.alura.kotlin_bank.teste.*
 //ctrl+alt+O limpa os imports não utilizado
 
 fun main() {
-
-
+var enderecoNull:Endereco?=null// ? indica que pode ser null
+//    endereco!!.logradouro//! ! não deixa ele ser null
+    val enderecoNaoNull:Endereco=enderecoNull!!
+    enderecoNaoNull.logradouro
 }
+
 
 
 
