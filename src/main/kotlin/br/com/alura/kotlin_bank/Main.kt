@@ -8,48 +8,44 @@ import java.lang.IllegalStateException
 //ctrl+alt+O limpa os imports não utilizado
 
 fun main() {
-var enderecoNull:Endereco?=null// ? indica que pode ser null
-var enderecoNullValido:Endereco?= Endereco(logradouro = "casa", bairro = "centro", complemento = "predio")// ? indica que pode ser null
-//    endereco!!.logradouro//! ! não deixa ele ser null
-//    val enderecoNaoNull:Endereco=enderecoNull!!
-//    enderecoNaoNull.logradouro
-    println(enderecoNull?.logradouro)//usando safe call ? ele verifica e retorna se ele for null ou não
-    println(enderecoNullValido?.logradouro)//usando safe call ? ele verifica e retorna se ele for null ou não
-    //usando o safe call você tem que garantir que o valor é null ou nao exemplo
-    println(enderecoNullValido?.logradouro?.length?.toByte())//verifico que cada etapa é ou nao um null
-    //let doc:https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/let.html
-//    ao usar o let você consegue otimizar essa verificação de null
-//    ele so vai excutar so caso não for null
-    enderecoNullValido?.let {endereco:Endereco ->
-//        it vem como apelido mas pode ser modificado
-//        println(it.logradouro)
-        println(endereco.logradouro)
-        println(endereco.bairro)
-        // utilizar nesse exemplo objeto de uma class que pode ser null (Endereço.complemento )
-       // val tamanhoComplemento:Int = endereco.complemento?.length ?:0 //se ele for um nul retorna 0
-        val tamanhoComplemento:Int = endereco.complemento?.length ?:throw IllegalStateException("comento é obrigatorio e esta vazio ")
-        println("tamanhondo length do complemento é: $tamanhoComplemento")
+val idade1=23
+val idade2=22
+val idade3=35
 
+    val maiorIdade = if (idade1 > idade2 && idade1 > idade3) {
+        idade1
+    } else if (idade2 > idade3) {
+        idade2
+    } else {
+        idade3
     }
+    println(maiorIdade)
     println()
-    println("enderecoNull")
-    enderecoNull?.let {endereco:Endereco ->
-//        it vem como apelido mas pode ser modificado
-//        println(it.logradouro)
-        println(endereco.logradouro)
-        println(endereco.bairro)
 
+   val idades= IntArray(size = 5)//tamanho do array 4
+    idades[0]=25 //[posisao 0,1,2,3]
+    idades[1]=22
+    idades[2]=26
+    idades[3]=45
+    idades[4]=32
+    var maiorIdadeArray=0
+    for (idade in idades){
+       if (idade>maiorIdadeArray){
+           maiorIdadeArray=idade
+       }
     }
+    println(maiorIdadeArray)
 
+    println()
+    var maiorIdadeArrayOf=0
+    val idadesArrayOf:IntArray= intArrayOf(26,24,35,36,37,42)
+    for (idade in idadesArrayOf){
+        if (idade>maiorIdadeArrayOf){
+            maiorIdadeArrayOf=idade
+        }
+    }
+    println(maiorIdadeArrayOf)
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -60,6 +56,7 @@ var enderecoNullValido:Endereco?= Endereco(logradouro = "casa", bairro = "centro
 //testaContasDiferentes()
 // autentica()
 //testaContasDiferentes()
+//recursosNUll()
 
 /*
  object declarations e companion object
