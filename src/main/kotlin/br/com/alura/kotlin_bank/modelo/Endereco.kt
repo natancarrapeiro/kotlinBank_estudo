@@ -7,7 +7,7 @@ class Endereco (
     val cidade:String="",
     val estado:String="",
     val cep :String="",
-    val complemento:String=""
+    val complemento:String?=null//agora ele pode ser nulo
 
 ){
     //alt+ insert (toString) seleciona o que quer mostrar

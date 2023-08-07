@@ -3,12 +3,13 @@ package br.com.alura.kotlin_bank
 import br.com.alura.kotlin_bank.exception.SaldoInsuficienteException
 import br.com.alura.kotlin_bank.modelo.*
 import br.com.alura.kotlin_bank.teste.*
+import java.lang.IllegalStateException
 
 //ctrl+alt+O limpa os imports não utilizado
 
 fun main() {
 var enderecoNull:Endereco?=null// ? indica que pode ser null
-var enderecoNullValido:Endereco?= Endereco(logradouro = "casa", bairro = "centro")// ? indica que pode ser null
+var enderecoNullValido:Endereco?= Endereco(logradouro = "casa", bairro = "centro", complemento = "predio")// ? indica que pode ser null
 //    endereco!!.logradouro//! ! não deixa ele ser null
 //    val enderecoNaoNull:Endereco=enderecoNull!!
 //    enderecoNaoNull.logradouro
@@ -24,13 +25,20 @@ var enderecoNullValido:Endereco?= Endereco(logradouro = "casa", bairro = "centro
 //        println(it.logradouro)
         println(endereco.logradouro)
         println(endereco.bairro)
+        // utilizar nesse exemplo objeto de uma class que pode ser null (Endereço.complemento )
+       // val tamanhoComplemento:Int = endereco.complemento?.length ?:0 //se ele for um nul retorna 0
+        val tamanhoComplemento:Int = endereco.complemento?.length ?:throw IllegalStateException("comento é obrigatorio e esta vazio ")
+        println("tamanhondo length do complemento é: $tamanhoComplemento")
+
     }
+    println()
     println("enderecoNull")
     enderecoNull?.let {endereco:Endereco ->
 //        it vem como apelido mas pode ser modificado
 //        println(it.logradouro)
         println(endereco.logradouro)
         println(endereco.bairro)
+
     }
 
 }
