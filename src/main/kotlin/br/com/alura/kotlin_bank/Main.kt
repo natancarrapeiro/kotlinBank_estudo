@@ -8,7 +8,7 @@ import br.com.alura.kotlin_bank.teste.*
 
 fun main() {
 var enderecoNull:Endereco?=null// ? indica que pode ser null
-var enderecoNullValido:Endereco?= Endereco(logradouro = "casa")// ? indica que pode ser null
+var enderecoNullValido:Endereco?= Endereco(logradouro = "casa", bairro = "centro")// ? indica que pode ser null
 //    endereco!!.logradouro//! ! não deixa ele ser null
 //    val enderecoNaoNull:Endereco=enderecoNull!!
 //    enderecoNaoNull.logradouro
@@ -16,6 +16,22 @@ var enderecoNullValido:Endereco?= Endereco(logradouro = "casa")// ? indica que p
     println(enderecoNullValido?.logradouro)//usando safe call ? ele verifica e retorna se ele for null ou não
     //usando o safe call você tem que garantir que o valor é null ou nao exemplo
     println(enderecoNullValido?.logradouro?.length?.toByte())//verifico que cada etapa é ou nao um null
+    //let doc:https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/let.html
+//    ao usar o let você consegue otimizar essa verificação de null
+//    ele so vai excutar so caso não for null
+    enderecoNullValido?.let {endereco:Endereco ->
+//        it vem como apelido mas pode ser modificado
+//        println(it.logradouro)
+        println(endereco.logradouro)
+        println(endereco.bairro)
+    }
+    println("enderecoNull")
+    enderecoNull?.let {endereco:Endereco ->
+//        it vem como apelido mas pode ser modificado
+//        println(it.logradouro)
+        println(endereco.logradouro)
+        println(endereco.bairro)
+    }
 
 }
 
