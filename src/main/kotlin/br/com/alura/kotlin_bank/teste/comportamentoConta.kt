@@ -17,6 +17,6 @@ fun comportamentoConta() {
     contaNatan.minhaConta()
     contaNatan.depositar(50.0)
     contaNatan.sacar(25.0)
-    contaNatan.transferir(contaCarapeiro, 10.0, senha = 2)
+    contaNatan.transferir(contaDestino = contaCarapeiro, 10.0, senha = 2)
     contaCarapeiro.minhaConta()
 }

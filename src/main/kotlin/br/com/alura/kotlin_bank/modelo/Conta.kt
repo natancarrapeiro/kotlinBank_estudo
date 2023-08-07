@@ -52,8 +52,7 @@ abstract class Conta(
         if (!autentica(senha)){
             throw  FalhaAutenticacaoException()
         }
-        throw  NumberFormatException()
-
+       // throw  NumberFormatException() teste de erro
         this.saldo -= valorDeTranferencia
         contaDestino.depositar(valorDeTranferencia)
         println("transferencia relizada com sucesso ")
