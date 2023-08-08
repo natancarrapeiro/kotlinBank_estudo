@@ -10,36 +10,20 @@ import br.com.alura.kotlin_bank.list.livros
 
 fun main() {
 
-    livros.add(
-        Livro(
-            titulo = "minha vida",
-            autor = "natan",
-            anoPublicacao = 2023,
-            editora = "minha"
-        )
-    )
-    livros.impimeMarcadores()
-    livros.remove(livro2)
-    println()
-    livros.impimeMarcadores()
-    println()
-//    usando Livro():Comparable
-    val ordenacaoAnoDePublicacao: List<Livro> =
-        livros.sorted()//antes de chama eu fiz a lista de Livros ter um sub tipo Comparable
-    ordenacaoAnoDePublicacao.impimeMarcadores()
-    println()
-//    usando sem Comrable
-    val ordenadoPorTitulo: List<Livro> = livros.sortedBy { it.titulo }
-    ordenadoPorTitulo.impimeMarcadores()
-    println()
-    val ordenadoPorAutores = livros.sortedBy { it.autor }
-    ordenadoPorAutores.impimeMarcadores()
 
 
 }
 
-//lista
 
+
+
+
+
+
+//lista
+//removeAdicionaLista()
+//oredenandoLista()
+//filtrandoLista()
 
 //arrays
 //navegandoArray()
