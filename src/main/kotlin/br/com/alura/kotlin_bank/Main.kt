@@ -7,19 +7,7 @@ import br.com.alura.kotlin_bank.list.*
 
 fun main() {
 
-    livrosNull.impimeMarcadores()
-
-    livrosNull
-        .groupBy { it?.editora ?: "editora desconhecida" }
-        .forEach { (editora: String?, livros: List<Livro?>) ->
-            println(
-                "editora $editora: titulo${
-                    livros.joinToString {
-                        it?.titulo ?: ""
-                    }
-                }")
-        }
-
+testaDaPrateleira()
 
 }
 
@@ -28,6 +16,7 @@ fun main() {
 //removeAdicionaLista()
 //oredenandoLista()
 //filtrandoLista()
+//testeLivrosNUll()
 
 //arrays
 //navegandoArray()
