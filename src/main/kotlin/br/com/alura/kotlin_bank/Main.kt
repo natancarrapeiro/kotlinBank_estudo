@@ -1,5 +1,9 @@
 package br.com.alura.kotlin_bank
 
+import br.com.alura.kotlin_bank.Array.funcaoArrays.bigDecimalArrayOf
+import br.com.alura.kotlin_bank.Array.funcaoArrays.somatoria
+import br.com.alura.kotlin_bank.Array.funcaoArrays.calculaAumentoRelativo
+import br.com.alura.kotlin_bank.Array.funcaoArrays.media
 import java.math.BigDecimal
 import java.math.RoundingMode
 
@@ -25,37 +29,30 @@ fun main() {
     println(gastoInicial)
 
     val meses: BigDecimal =6.toBigDecimal()
+
     val gastoTotal: BigDecimal? = salarioComAumento.fold(gastoInicial) { aculador, salario ->
         (salario?.times(meses))?.setScale(2, RoundingMode.UP)?.let { aculador?.plus(it) }
     }
     println("gasto total apos 6 meses $gastoTotal")
 
-    println(intArrayOf(1, 2, 3).sum())
+    //println(intArrayOf(1, 2, 3).sum())
+    val salariosOrdenados: List<BigDecimal?> = salarioComAumento.sortedByDescending {it}
+    //ordenação de Array doc https://www.techiedelight.com/pt/sort-array-in-decreasing-order-in-kotlin/
+    println(salariosOrdenados)
 
+    val maiores3salarios: Array<BigDecimal?> =salariosOrdenados.take(3)
+        .toTypedArray()
+    val mediaSalarios: BigDecimal? =maiores3salarios.media()
+    println(mediaSalarios)
 
 }
 
 
-fun calculaAumentoRelativo(salario: BigDecimal, aumento: BigDecimal)
-        : BigDecimal? =
-    if (salario < "5000.00".toBigDecimal()) {
-        salario + "500".toBigDecimal()
-    } else {
-        (salario * aumento).setScale(2, RoundingMode.UP)//setScale coloca quantas casa depois dá,
-//                                                                         RoundingMode.UP arendonda para cima
-    }
 
-fun bigDecimalArrayOf(vararg valores: String): Array<BigDecimal> {//(vararg)vc pode passar varias variaveis
-    return Array<BigDecimal>(valores.size) { i ->
-        valores[i].toBigDecimal()
-    }
-}
 
-fun Array<BigDecimal?>.somatoria(): BigDecimal? {
-   return this.reduce { acumulador, valor ->// reduce Acumula o valor começando com o primeiro elemento e aplicando a operação da esquerda para a direita ao valor atual do acumulador e a cada elemento.
-       acumulador?.plus(valor!!)
-    }
-}
+
+
+
 
 
 //arrays
