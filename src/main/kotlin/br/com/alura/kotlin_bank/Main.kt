@@ -1,23 +1,27 @@
 package br.com.alura.kotlin_bank
 
-import br.com.alura.kotlin_bank.list.Livro
-import br.com.alura.kotlin_bank.list.impimeMarcadores
-import br.com.alura.kotlin_bank.list.livro2
-import br.com.alura.kotlin_bank.list.livros
+import br.com.alura.kotlin_bank.list.*
 
 //ctrl+alt+O limpa os imports não utilizado
 
 
 fun main() {
 
+    livrosNull.impimeMarcadores()
+
+    livrosNull
+        .groupBy { it?.editora ?: "editora desconhecida" }
+        .forEach { (editora: String?, livros: List<Livro?>) ->
+            println(
+                "editora $editora: titulo${
+                    livros.joinToString {
+                        it?.titulo ?: ""
+                    }
+                }")
+        }
 
 
 }
-
-
-
-
-
 
 
 //lista

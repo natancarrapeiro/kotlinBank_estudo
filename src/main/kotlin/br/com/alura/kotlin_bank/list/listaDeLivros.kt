@@ -47,14 +47,10 @@ val livro8 = Livro(
     editora = "editora B"
 )
 
-val livros: MutableList<Livro> = mutableListOf(livro1, livro2, livro3, livro4, livro5, livro6, livro7, livro8)
+val livros: MutableList<Livro> = mutableListOf(livro1, livro2, livro3, livro4, livro5, livro6, livro7, livro8
+)
 
-fun List<Livro>.impimeMarcadores() {
-    val textoExibidoModificado = this.joinToString(separator = "\n") {
-        "- ${it.titulo} autor/autora: ${it.autor}\n ano: ${it.anoPublicacao}"
-    }
-    println("### Lista de Livros ###\n $textoExibidoModificado")
-}
+
 //}fun MutableList<Livro>.impimeMarcadores(){
 //    val textoExibidoModificado = this.joinToString(separator = "\n") {
 //        "- ${it.titulo} autor/autora: ${it.autor}"
