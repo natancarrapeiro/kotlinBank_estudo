@@ -1,26 +1,30 @@
 package br.com.alura.kotlin_bank
 
-import br.com.alura.kotlin_bank.Array.funcaoArrays.bigDecimalArrayOf
-import br.com.alura.kotlin_bank.Array.funcaoArrays.somatoria
-import br.com.alura.kotlin_bank.Array.funcaoArrays.calculaAumentoRelativo
-import br.com.alura.kotlin_bank.Array.funcaoArrays.media
-import br.com.alura.kotlin_bank.list.listaDeLivros
-import java.math.BigDecimal
-import java.math.RoundingMode
+import br.com.alura.kotlin_bank.list.Livro
+import br.com.alura.kotlin_bank.list.impimeMarcadores
+import br.com.alura.kotlin_bank.list.livro2
+import br.com.alura.kotlin_bank.list.livros
 
 //ctrl+alt+O limpa os imports não utilizado
 
 fun main() {
 
+    livros.add(
+        Livro(
+            titulo = "minha vida",
+            autor = "natan",
+            anoPublicacao = 2023,
+            editora = "minha"
+        )
+    )
+    livros.impimeMarcadores()
+    livros.remove(livro2)
+    println()
+    livros.impimeMarcadores()
 
 }
 
 //lista
-
-
-
-
-
 
 
 //arrays
